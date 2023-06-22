@@ -41,6 +41,7 @@ typedef struct instruction_s
 void push(unsigned int num_line, const char *arg);
 void pall(unsigned int num_line __attribute__((unused)),
 		char *arg __attribute__((unused)));
+void pint(unsigned int num_line, char *arg __attribute__((unused)));
 
 
 #endif

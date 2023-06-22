@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
 				push(num_line, arg);
 			else if (strcmp(oc, "pall") == 0)
 				pall(num_line, arg);
+			else if (strcmp(oc, "pint") == 0)
+				pint(num_line, arg);
 			else
 			{
 				fprintf(stderr, "L%u: unknown instruction %s\n", num_line, oc);
