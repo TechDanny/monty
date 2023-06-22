@@ -7,7 +7,8 @@
  *
  */
 
-void nop(unsigned int num_line, char *arg __attribute__((unused)));
+void nop(unsigned int num_line __attribute__((unused)),
+		char *arg __attribute__((unused)))
 {
 
 }
