@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MONTY_H
+#define MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,6 +22,8 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 
+extern stack_t *st;
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -34,9 +36,7 @@ typedef struct instruction_s
 {
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;	
-
-extern stack_t *stack;
+} instruction_t;
 
 void push(unsigned int num_line, const char *arg);
 void pall(unsigned int num_line __attribute__((unused)),

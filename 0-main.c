@@ -8,10 +8,12 @@
  * Return:always 0
  */
 
+stack_t *st = NULL;
+
 int main(int argc, char *argv[])
 {
 	char ln[256];
-	unsigned int num_line = 1;
+	unsigned int num_line;
 	FILE *fn;
 
 	if (argc != 2)
@@ -26,10 +28,12 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
+	num_line = 1;
+
 	while (fgets(ln, sizeof(ln), fn))
 	{
-		char *oc = strtok(ln, "\t\n");
-		char *arg = strtok(NULL, "\t\n");
+		char *oc = strtok(ln, " \t\n");
+		char *arg = strtok(NULL, " \t\n");
 
 		if (oc)
 		{

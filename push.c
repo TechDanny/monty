@@ -27,9 +27,9 @@ void push(unsigned int num_line, const char *arg)
 	}
 	newNode->n = count;
 	newNode->prev = NULL;
-	newNode->next = stack;
+	newNode->next = st;
 
-	if (stack)
-		stack->prev = newNode;
-	stack = newNode;
+	if (st)
+		st->prev = newNode;
+	st = newNode;
 }

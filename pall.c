@@ -10,7 +10,7 @@
 void pall(unsigned int num_line __attribute__((unused)),
 		char *arg __attribute__((unused)))
 {
-	stack_t *ptr = stack;
+	stack_t *ptr = st;
 
 	while (ptr)
 	{
