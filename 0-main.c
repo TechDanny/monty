@@ -49,6 +49,8 @@ int main(int argc, char *argv[])
 				swap(num_line, arg);
 			else if (strcmp(oc, "add") == 0)
 				add(num_line, arg);
+			else if (strcmp(oc, "nop") == 0)
+				nop(num_line, arg);
 			else
 			{
 				fprintf(stderr, "L%u: unknown instruction %s\n", num_line, oc);
