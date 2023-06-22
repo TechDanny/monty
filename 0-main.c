@@ -43,6 +43,8 @@ int main(int argc, char *argv[])
 				pall(num_line, arg);
 			else if (strcmp(oc, "pint") == 0)
 				pint(num_line, arg);
+			else if (strcmp(oc, "pop") == 0)
+				pop(num_line, arg);
 			else
 			{
 				fprintf(stderr, "L%u: unknown instruction %s\n", num_line, oc);
